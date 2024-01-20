@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>GitHub Repositories</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>GitHub Repositories List<img src="githubicon.png" alt="GitHub Icon" width="96" height="96"></h1>
+        <div class="input-box">
+            <label for="username">GitHub Username:</label>
+            <input type="text" id="username" placeholder="Enter GitHub username">
+        </div>
+
+        <div class="input-box">
+            <label for="search">Search Repositories:</label>
+            <input type="text" id="search" placeholder="Enter repository name">
+        </div>
+        <button onclick="fetchRepositories()">Get Repositories</button>
+
+        <div id="loader" class="loader"></div>
+
+        <!-- User Information and Repositories Container Div -->
+        <div class="user-repo-container">
+            <!-- User Information -->
+            <div id="user-info" class="user-info">
+                <img id="user-avatar" class="user-avatar" src="" alt="User Avatar">
+                <p id="user-name" class="user-name"></p>
+                <p id="user-bio" class="user-bio"></p>
+            </div>
+    <!-- Additional User Details -->
+    <div class="user-details">
+        <div class="detail-item">
+            <img src="twittericon.png" alt="Twitter Icon" class="icon">
+            <p id="user-twitter" class="detail"></p>
+        </div>
+        <div class="detail-item">
+            <img src="gmailicon.png" alt="Email Icon" class="icon">
+            <p id="user-email" class="detail"></p>
+        </div>
+		<div class="detail-item">
+		<img src="website.gif" alt="website Icon" class="icon">
+            <p id="user-linkedin" class="detail"></p>
+		</div>
+        <div class="detail-item">
+            <img src="location.png" alt="Location Icon" class="icon">
+            <p id="user-location" class="detail"></p>
+        </div>
+        <div class="detail-item">
+            <img src="followers.png" alt="Followers Icon" class="icon">
+            <p id="user-followers" class="detail"></p>
+        </div>
+        <div class="detail-item">
+            <img src="following.png" alt="Following Icon" class="icon">
+            <p id="user-following" class="detail"></p>
+        </div>
+    </div>
+</div>
+
+            <!-- Repositories Container -->
+            <div id="repositories-container" class="repositories-container">
+                <!-- Repositories Per Page Dropdown -->
+                <div class="repositories-per-page">
+                    <label for="repositoriesPerPage">Repositories Per Page:</label>
+                    <select id="repositoriesPerPage" onchange="changeRepositoriesPerPage()">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+
+                <div id="repositories" class="repositories"></div>
+            </div>
+        </div>
+
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Include your script.js file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
+
