@@ -36,5 +36,3 @@ After each search, the application clears previous user information, providing a
 - HTML5
 - CSS3 (Styling with Bootstrap)
 - JavaScript (Fetch API for GitHub data)
-
-
